@@ -1,0 +1,15 @@
+# -*- org-confirm-babel-evaluate: nil; -*-
+#+TITLE: OYC Physics
+#+OPTIONS: num:nil
+#+STARTUP: indent
+#+PROPERTY: header-args:axiom :exports results
+#+PROPERTY: header-args:latex :results drawer :exports results
+
+* Initialization
+
+#+BEGIN_SRC axiom :results none
+)clear all
+)set output characters default
+#+END_SRC
+
+* Problem Set III
