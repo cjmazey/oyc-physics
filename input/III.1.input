@@ -1,0 +1,15 @@
+constraints := matrix
+  [ [sin(a), sin(b), -m*g],
+    [-cos(a), cos(b), 0.0] ]
+
+solutions := nullSpace(constraints).1
+
+[T_1, T_2, ?] := (solutions :: List ?)
+
+outputGeneral(2)
+
+parameters := [g=9.81, m=10, a=%pi/6, b=%pi/3]
+
+eval(T_1,parameters)
+
+eval(T_2,parameters)

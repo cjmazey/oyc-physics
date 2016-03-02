@@ -2,14 +2,20 @@
 #+TITLE: OYC Physics
 #+OPTIONS: num:nil
 #+STARTUP: indent
-#+PROPERTY: header-args:axiom :exports results
+#+PROPERTY: header-args:axiom :results output :exports results
 #+PROPERTY: header-args:latex :results drawer :exports results
 
 * Initialization
 
-#+BEGIN_SRC axiom :results none
-)clear all
+#+BEGIN_SRC axiom :results silent
 )set output characters default
 #+END_SRC
 
 * Problem Set III
+
+** 1.
+
+#+BEGIN_SRC axiom
+  )clear all
+  )read "input/III.1.input"
+#+END_SRC
