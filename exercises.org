@@ -49,3 +49,15 @@ x &= \frac{-Mg\mu - mg\mu - (m+M)g\mu'}{-k} \\
 &= g\frac{(m+M)\mu + (m+M)\mu'}{k} \\
 &= g\frac{(m+M)(\mu+\mu')}{k}
 \end{align*}
+
+** 3.
+
+Presumably the work done by the seatbelt equals the kinetic energy of
+the passenger; $W = F\delta{}d = \delta{}K =
+\frac{1}{2}m(\delta{}v)^2$.
+
+#+BEGIN_SRC axiom
+  )clear all
+  F := 1/2 * m * v^2 / d
+  eval(F,[m=75,v=70*10^3/3600,d=0.94])
+#+END_SRC
