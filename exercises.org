@@ -4,6 +4,7 @@
 #+STARTUP: indent
 #+PROPERTY: header-args:axiom :results output :exports results
 #+PROPERTY: header-args:latex :results drawer :exports results
+#+INFOJS_OPT: view:overview toc:nil
 
 * Initialization
 
@@ -19,3 +20,32 @@
   )clear all
   )read "input/III.1.input"
 #+END_SRC
+
+** 2.
+
+The problem does not state whether $\mu$ or $\mu'$ are the
+coefficients of static or kinetic friction.  We will assume that $\mu$
+is static (otherwise the blocks would be moving relative to each
+other, which means they are slipping,) and that $\mu'$ is kinetic
+(otherwise they are not moving at all.)
+
+The block of mass $m$ will slip if the force of friction between the
+two blocks can not give it the same acceleration as the block of mass
+$M$.  We solve for the more general case in part (ii) and obtain (i)
+by setting $\mu' = 0$.  We have
+\begin{align*}
+  -kx + mg\mu + (m+M)g\mu' &= MA \\
+  -mg\mu &= ma
+\end{align*}
+and we wish to know when $A \lt a$ (since the accelerations are
+negative.)
+
+Now, $m$ has maximum negative acceleration $a = -g\mu$.  If $a$ and
+$A$ are just equal then
+\begin{align*}
+-kx + mg\mu + (m+M)g\mu' &= -Mg\mu \\
+x &= \frac{-Mg\mu - mg\mu - (m+M)g\mu'}{-k} \\
+&= g\frac{M\mu + m\mu + (m+M)\mu'}{k} \\
+&= g\frac{(m+M)\mu + (m+M)\mu'}{k} \\
+&= g\frac{(m+M)(\mu+\mu')}{k}
+\end{align*}
