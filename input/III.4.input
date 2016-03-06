@@ -1,0 +1,22 @@
+)clear all
+
+outputGeneral(3)
+
+Foo := Equation(Expression(Fraction(Integer)))
+
+parameters := [g=9.81, m=7.2, k=150, l=80.e-2]
+
+eqn := k*Dl - m*g = m*a
+
+-- a
+eval(l + solve(eqn,Dl).1, concat(parameters, [a=0.95]))
+
+-- b
+eval(l + solve(eqn,Dl).1, concat(parameters, [a=0]))
+
+-- c
+eval(l + solve(eqn,Dl).1, concat(parameters, [a=-14/9.0]))
+
+-- d
+eval(solve(eqn,a).1, concat([Dl=3.2-l], parameters))
+eval(%, parameters)
