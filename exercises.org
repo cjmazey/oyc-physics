@@ -98,3 +98,14 @@ spring 2.  We have
 
 If they are parallel, then simply $F = k_e \Delta x = k_1 \Delta x +
 k_2 \Delta x$, i.e. $k = k_1 + k_2$.
+
+** 7.
+
+#+BEGIN_SRC latex
+  \begin{align*}
+    F &= m a \\
+    m g \mu_s &= m \frac{v^2}{r} \\
+    \mu_s &= \frac{{(2\pi r f)}^2}{g r} \\
+      &= \frac{4 \pi^2 f^2 r}{g}
+  \end{align*}
+#+END_SRC
