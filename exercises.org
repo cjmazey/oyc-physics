@@ -67,3 +67,34 @@ the passenger; $W = F\Delta{}d = \Delta{}K =
 #+BEGIN_SRC axiom
   )read input/III.4.input
 #+END_SRC
+
+** 5.
+
+The tension in the rope must balance gravity vertically and provide
+$a$ horizontally.  Thus
+#+BEGIN_SRC latex
+  \begin{align*}
+    T \cos \theta &= mg \\
+    T \sin \theta &= ma
+  \end{align*}
+#+END_SRC
+so that $\tan{\theta} = \frac{a}{g}$.
+
+** 6.
+
+If they are in series, imagine spring 1 is connected to a wall, and
+consider the point between the springs and the point at the end of
+spring 2.  We have
+#+BEGIN_SRC latex
+  \begin{align*}
+    k_1 \Delta x_1 &= k_2 \Delta x_2 \\
+    k_2 \Delta x_2 &= k_e \Delta x \\
+    \Delta x &= \Delta x_1 + \Delta x_2 \\
+    k_e &= \frac{k_2 \Delta x_2}{\Delta x_1 + \Delta x_2} \\
+    &= \frac{k_2 \Delta x_2}{\frac{k_2 \Delta x_2}{k_1} + \Delta x_2} \\
+    &= \frac{k_1 k_2}{k_1 + k_2}
+  \end{align*}
+#+END_SRC
+
+If they are parallel, then simply $F = k_e \Delta x = k_1 \Delta x +
+k_2 \Delta x$, i.e. $k = k_1 + k_2$.
