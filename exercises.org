@@ -123,3 +123,18 @@ k_2 \Delta x$, i.e. $k = k_1 + k_2$.
     T' &= 2 \pi \sqrt{\frac{m R}{M g}}
   \end{align*}
 #+END_SRC
+
+** 9.
+
+#+BEGIN_SRC axiom
+  )clear all
+  outputGeneral(3)
+
+  parameters := [g=9.81, m=1000, r=20]
+  eqn := m*g = m*v^2/r
+  eval(radicalSolve(eqn,v).1, parameters)
+
+  parameters := concat(parameters, %)
+  eqn := F = m*g + rhs(eqn)
+  eval(eqn,parameters)
+#+END_SRC
