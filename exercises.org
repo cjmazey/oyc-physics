@@ -109,3 +109,17 @@ k_2 \Delta x$, i.e. $k = k_1 + k_2$.
       &= \frac{4 \pi^2 f^2 r}{g}
   \end{align*}
 #+END_SRC
+
+** 8.
+
+#+BEGIN_SRC latex
+  \begin{align*}
+    T &= M g \\
+    T &= m a \\
+    M g &= m \frac{v^2}{R} \\
+    M g &= m \frac{(\frac{2 \pi R}{T'})^2}{R} \\
+    M g &= m \frac{m 4 \pi^2 R}{T'^2} \\
+    T'^2 &= m \frac{4 m R \pi^2}{M g} \\
+    T' &= 2 \pi \sqrt{\frac{m R}{M g}}
+  \end{align*}
+#+END_SRC
