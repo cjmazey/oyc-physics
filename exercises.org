@@ -138,3 +138,17 @@ k_2 \Delta x$, i.e. $k = k_1 + k_2$.
   eqn := F = m*g + rhs(eqn)
   eval(eqn,parameters)
 #+END_SRC
+
+** 10.
+
+#+BEGIN_SRC axiom
+  )clear all
+  outputGeneral(3)
+
+  parameters := [g=9.81, m=22, theta=35*%pi/180, mu=0.68]
+  eqn := F*cos(theta) = mu*(m*g + F*sin(theta))
+  eqn := solve(eqn,F).1
+  eval(eqn,parameters)
+
+  eval(m*g, parameters)
+#+END_SRC
