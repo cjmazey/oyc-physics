@@ -152,3 +152,16 @@ k_2 \Delta x$, i.e. $k = k_1 + k_2$.
 
   eval(m*g, parameters)
 #+END_SRC
+
+** 11.
+
+#+BEGIN_SRC axiom
+  )clear all
+
+  eqn := -M*g = -M*v^2/R
+  v_min := rhs(radicalSolve(eqn, v).1)
+  v_top := 2 * v_min
+  eqn_top := solve(N_top + M*g = M*v_top^2/R, N_top).1
+  v_bot := rhs(solve(1/2*M*v_top^2 + 2*R*M*g = 1/2*M*v_bot^2, v_bot).1)
+  eqn_bot := solve(N_bot - M*g = M*v_bot^2/R, N_bot).1
+#+END_SRC
