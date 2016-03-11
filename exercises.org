@@ -165,3 +165,118 @@ k_2 \Delta x$, i.e. $k = k_1 + k_2$.
   v_bot := rhs(solve(1/2*M*v_top^2 + 2*R*M*g = 1/2*M*v_bot^2, v_bot).1)
   eqn_bot := solve(N_bot - M*g = M*v_bot^2/R, N_bot).1
 #+END_SRC
+
+** 12.
+
+Let the \(x\)-axis be parallel to the inclined plane, and the
+\(y\)-axis be perpendicular to it.  The total force on $M$ in the $y$
+direction is $0$, so
+
+\[ N = Mg\cos \alpha \,.\]
+
+In the $x$ direction we have $F_m = -mg$, due to the tension in the
+rope, and $F_g = Mg\sin \alpha$, due to gravity.  In addition, if $M$
+is not moving, $F_s = -(F_m + F_k)$, up to a maximum of $\lvert F_s
+\rvert = N\mu_s$.  If it is moving, we have instead $\lvert F_k \rvert
+= N\mu_k$, with sign opposite of $F_m + F_k$.
+
+(i)
+$M$ will begin to slide downhill when $F_s$ has reached its maximum
+and $F_m + F_g - F_s > 0$, that is
+
+\[ -mg + Mg\sin(\alpha) - Mg\cos(\alpha)\mu_s > 0 \,.\]
+
+Solving for $m$,
+
+\[ m < M(sin(\alpha) - cos(\alpha)\mu_s) \,.\]
+
+(ii)
+$M$ will begin to slide uphill when $F_s$ has reached its maximum and
+$F_m + F_g + F_s < 0$:
+
+\[ -mg + Mg\sin(\alpha) + Mg\cos(\alpha)\mu_s < 0 \,.\]
+
+In terms of $m$:
+
+\[ m > M(sin(\alpha) + cos(\alpha)\mu_s) \,.\]
+
+Between these values for $m$, static friction is preventing $M$ from
+sliding.
+
+If we give the masses enough of a push to overcome static friction,
+then motion is still possible.  However, the motion will not continue
+if kinetic friction can not be overcome.  For this to be so, we must
+have $\lvert F_m + F_g \rvert \geq \lvert F_k \rvert$, or
+
+\[ \lvert -mg + Mg\sin(\alpha) \rvert \geq Mg\cos(\alpha)\mu_k \,.\]
+
+This happens when
+
+\begin{align*}
+  -mg + Mg\sin(\alpha) &\leq -Mg\cos(\alpha)\mu_k \\
+  m - M\sin(\alpha) &\geq M\cos(\alpha)\mu_k \\
+  m &\geq M(\sin(\alpha) + \cos(\alpha)\mu_k)
+\end{align*}
+
+or when
+
+\begin{align*}
+  -mg + Mg\sin(\alpha) &\geq Mg\cos(\alpha)\mu_k \\
+  m - M\sin(\alpha) &\leq -M\cos(\alpha)\mu_k \\
+  m &\leq M(\sin(\alpha) - \cos(\alpha)\mu_k) \,.
+\end{align*}
+
+If we increase $m$ enough, it will eventually drag $M$ uphill, because
+the weight of $M$ and the static friction on it will eventually be
+overcome.  However, $M$ may never be able to cause $m$ to go up, as it
+may not itself move, its opposing static friction increasing
+proportionally with its weight.
+
+** 13.
+
+The energy put into the system is the work done against the spring;
+
+\[ \int_0^A kx\,dx =
+   \left.\frac{1}{2}kx^2\right\rvert_0^A =
+   \frac{1}{2}kA^2 \,.\]
+
+(i)
+At $x=0$ all energy will be kinetic; the speed will be
+
+\begin{align*}
+  \frac{1}{2}kA^2 &= \frac{1}{2}mv^2 \\
+  v &= A\sqrt{\frac{k}{m}}
+\end{align*}
+
+(ii)
+It will be at $x = -A$, since once again all energy is potential.
+
+(iii)
+In this case, when the mass has reached $x=0$, friction has removed
+energy from the system; $\Delta E = -\mu_k N A$.  Thus the speed is
+
+\begin{align*}
+  \frac{1}{2} k A^2 -\mu_k N A &= \frac{1}{2} m v^2 \\
+  k A^2 - 2 \mu_k m g A &= m v^2 \\
+  v &= \sqrt{\frac{k A^2 - 2 \mu_k m g A}{m}}
+\end{align*}
+
+(iv)
+Here all the energy that remains will be potential.  Friction will
+have changed the energy by $\Delta E = \mu_k N (x - A)$
+
+\begin{align*}
+  \frac{1}{2} k x^2 &= \frac{1}{2} k A^2 + \mu_k N (x - A) \\
+  k x^2 &= k A^2 + 2 \mu_k N (x - A) \\
+  k x^2 - 2 \mu_k N x &= k A^2 - 2 \mu_k N A \\
+  (k) x^2 + (-2 \mu_k N) x + (2 \mu_k N A - k A^2) &= 0 \\
+  x &= \frac{2 \mu_k N \pm \sqrt{4 \mu_k^2 N^2 - 4 k (2 \mu_k N A - k A^2)}}{2 k} \\
+  x &= \frac{\mu_k N \pm \sqrt{\mu_k^2 N^2 - k (2 \mu_k N A - k A^2)}}{k} \\
+  x &= \frac{\mu_k N \pm \sqrt{\mu_k^2 N^2 - 2 k \mu_k N A + k^2 A^2}}{k} \\
+  x &= \frac{\mu_k N \pm \sqrt{(\mu_k N - k A)^2}}{k} \\
+  x &= \frac{\mu_k N \pm (\mu_k N - k A)}{k}
+\end{align*}
+
+One solution is just when the mass has not yet been released.  Thus
+
+\[ x = \frac{2 \mu_k N - k A}{k} = \frac{2 \mu_k N}{k} - A \]
